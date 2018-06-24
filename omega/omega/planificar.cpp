@@ -73,7 +73,7 @@ void planificar::on_botonagregar_clicked()
 void planificar::on_regresar_clicked()
 {
 
-    std::ifstream otro;
+   /* std::ifstream otro;
     otro.open("../bd/actual.txt");
     std::string num;
 
@@ -84,7 +84,6 @@ void planificar::on_regresar_clicked()
 
     std::ofstream nuevo;
     nuevo.open(num.c_str());
-    nuevo.clear();
-    nuevo.close();
+    nuevo.close();*/
     this->close();
 }

@@ -14,6 +14,7 @@ class cronograma : public QDialog
 
 public:
     explicit cronograma(QWidget *parent = 0);
+    void vercro();
     ~cronograma();
 
 private slots:
