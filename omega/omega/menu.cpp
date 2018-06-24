@@ -33,9 +33,24 @@ void menu::on_PLANIFICAR_clicked()
 
 void menu::on_VER_clicked()
 {
+
+    std::ifstream otro;
+    otro.open("../bd/actual.txt");
+    std::string num;
+
+        getline(otro, num, '\n');
+
+
+    otro.close();
+
     std::ifstream nuevo;
-    nuevo.open("../bd/Entrada.txt");
+    nuevo.open(num.c_str());
+    while(nuevo.eof()){
+        char c;
+        nuevo>>c;
+    }
     nuevo.close();
+
     this->p.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,p.size(),qApp->desktop()->availableGeometry()));
     this->p.setFixedSize(650,435);
     this->p.show();

@@ -29,13 +29,25 @@ cronograma::cronograma(QWidget *parent) :
 
    ///ui->tableWidget->insertRow(ui->tableWidget->rowCount());
 
+
+   std::ifstream otro;
+   otro.open("../bd/actual.txt");
+   std::string num;
+
+       getline(otro, num, '\n');
+
+
+   otro.close();
+
+
     std::ifstream nuevo;
-    nuevo.open("../bd/Entrada.txt");
+    nuevo.open(num.c_str());
 
     if(nuevo.bad()){
         qDebug()<<"No sirvio";
     }
     qint8 numero =0;
+
 
     while(!nuevo.eof()){
 
@@ -44,9 +56,9 @@ cronograma::cronograma(QWidget *parent) :
         std::string tipo;
         std::string dias;
 
-        getline(nuevo,hora,':');
-        getline(nuevo,act,':');
-        getline(nuevo,tipo,':');
+        getline(nuevo,hora,'#');
+        getline(nuevo,act,'#');
+        getline(nuevo,tipo,'#');
         getline(nuevo,dias,'\n');
 
         QString h = QString::fromStdString(hora);

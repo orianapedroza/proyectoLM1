@@ -4,6 +4,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QPixmap>
+#include <fstream>
 
 login::login(QWidget *parent) :
     QDialog(parent),
@@ -40,20 +41,54 @@ void login::on_botonlogin_clicked()
         qDebug()<<nombre;
         qDebug()<<clave;
 
-        if((user.ver_nombre()==nuevo) && (user.ver_contrasenna()==nuevacla) ){
-           this->x.setFixedSize(650,435);
-           this->x.show();
-           this->hide();
+        std::string name = nombre.toStdString();
+        std::string pass = clave.toStdString();
 
+        std::string comp;
+        comp="../bd/"+name+pass+".txt";
+
+        QString m = QString::fromStdString(comp);
+
+
+        qDebug()<<m;
+
+
+        if (std::ifstream(comp.c_str(),std::ios::in))
+        {
+             qDebug()<<"El archivo existe";
+             this->x.setFixedSize(650,435);
+             this->x.show();
+             this->hide();
+
+        }
+        else{
+            QMessageBox::warning(this,"Login","Clave invalida, reintente");
+            qDebug()<<"Clave incorrecta";
+        }
+
+        std::ofstream arc;
+        arc.open("../bd/actual.txt", std::ios::trunc);
+            if (arc.is_open()){
+                arc<<comp;
+                qDebug()<<"Entramos";
+            }
+            else qDebug()<<"No Entramos";
+        arc.close();
+
+                /*
+
+        if((user.ver_nombre()==nuevo) && (user.ver_contrasenna()==nuevacla) ){
+
+*/
 
 
             /*QMessageBox::information(this,"Login","Entraste");
             qDebug()<<"Clave correcta";*/
-        }
+       /* }
         else{
             QMessageBox::information(this,"Login","Clave invalida, reintente");
             qDebug()<<"Clave incorrecta";
-        }
+        }*/
 }
 
 void login::on_salir_clicked()

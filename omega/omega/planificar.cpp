@@ -40,9 +40,22 @@ void planificar::on_botonagregar_clicked()
     qDebug()<<act;
     qDebug()<<lun;
 
+    std::ifstream otro;
+    otro.open("../bd/actual.txt");
+    std::string num;
+
+        getline(otro, num, '\n');
+
+
+    otro.close();
+
+    QString rafa = QString::fromStdString(num);
+    qDebug()<<"rafaAqui esta rafa";
+    qDebug()<<rafa;
+
     std::fstream salida;
 
-    salida.open("../bd/Entrada.txt");
+    salida.open(num.c_str());
     if(salida.bad()) qDebug()<<"Malo";
 
     salida.seekg(0, salida.end);
@@ -51,7 +64,7 @@ void planificar::on_botonagregar_clicked()
     std::string a = act.toStdString();
     std::string t = tipo.toStdString();
 
-    salida<<h<<":"<<a<<":"<<t<<":"<<lun<<":"<<mar<<":"<<mie<<":"<<jue<<":"<<vie<<":"<<sab<<":"<<dom<<'\n';
+    salida<<h<<"#"<<a<<"#"<<t<<"#"<<lun<<"#"<<mar<<"#"<<mie<<"#"<<jue<<"#"<<vie<<"#"<<sab<<"#"<<dom<<'\n';
 
     salida.close();
 }
@@ -60,8 +73,18 @@ void planificar::on_botonagregar_clicked()
 void planificar::on_regresar_clicked()
 {
 
-    std::ifstream nuevo;
-    nuevo.open("../bd/Entrada.txt");
+    std::ifstream otro;
+    otro.open("../bd/actual.txt");
+    std::string num;
+
+        getline(otro, num, '\n');
+
+
+    otro.close();
+
+    std::ofstream nuevo;
+    nuevo.open(num.c_str());
+    nuevo.clear();
     nuevo.close();
-    this->hide();
+    this->close();
 }

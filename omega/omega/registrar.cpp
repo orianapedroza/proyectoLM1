@@ -65,7 +65,7 @@ void registrar::on_pushButton_clicked()
     QString n = QString::fromStdString(nu);
     qDebug()<<n;
 
-    std::fstream arc(nu.c_str(), std::ios::out | std::ios::in );
+    std::fstream arc(nu.c_str(), std::ios::out | std::ios::in | std::ios::trunc);
             if (!arc.is_open())
                 qDebug()<<"No Entramos";
             else qDebug()<<"Entramos";
