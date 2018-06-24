@@ -30,7 +30,7 @@ public:
     {
         if (cronograma->objectName().isEmpty())
             cronograma->setObjectName(QStringLiteral("cronograma"));
-        cronograma->resize(647, 464);
+        cronograma->resize(760, 471);
         tableWidget = new QTableWidget(cronograma);
         if (tableWidget->columnCount() < 9)
             tableWidget->setColumnCount(9);
@@ -65,11 +65,11 @@ public:
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(8, __qtablewidgetitem8);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(5, 60, 611, 192));
+        tableWidget->setGeometry(QRect(10, 70, 741, 291));
         tableWidget->setMinimumSize(QSize(611, 192));
         regresar = new QPushButton(cronograma);
         regresar->setObjectName(QStringLiteral("regresar"));
-        regresar->setGeometry(QRect(270, 320, 85, 27));
+        regresar->setGeometry(QRect(340, 390, 85, 27));
 
         retranslateUi(cronograma);
 

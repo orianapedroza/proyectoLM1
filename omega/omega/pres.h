@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include "login.h"
+#include "registrar.h"
 
 namespace Ui {
 class pres;
@@ -17,11 +18,17 @@ public:
     ~pres();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_ingresar_clicked();
+
+    void on_salir_clicked();
+
+    void on_registrar_clicked();
 
 private:
     Ui::pres *ui;
     login pre;
+    registrar h;
 };
 
 #endif // PRES_H

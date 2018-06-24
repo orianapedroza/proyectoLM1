@@ -31,16 +31,22 @@ public:
     {
         if (menu->objectName().isEmpty())
             menu->setObjectName(QStringLiteral("menu"));
-        menu->resize(646, 464);
+        menu->resize(760, 471);
         pushButton = new QPushButton(menu);
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(180, 220, 85, 27));
         PLANIFICAR = new QCommandLinkButton(menu);
         PLANIFICAR->setObjectName(QStringLiteral("PLANIFICAR"));
         PLANIFICAR->setGeometry(QRect(150, 60, 168, 41));
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        PLANIFICAR->setIcon(icon);
         VER = new QCommandLinkButton(menu);
         VER->setObjectName(QStringLiteral("VER"));
         VER->setGeometry(QRect(150, 110, 168, 41));
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/icons(2).png"), QSize(), QIcon::Normal, QIcon::Off);
+        VER->setIcon(icon1);
 
         retranslateUi(menu);
 

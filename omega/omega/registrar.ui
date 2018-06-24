@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>registrar</class>
+ <widget class="QWidget" name="registrar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>760</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>false</bool>
+  </property>
+  <property name="acceptDrops">
+   <bool>false</bool>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <widget class="QLineEdit" name="NOMBRE">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>90</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="inputMethodHints">
+    <set>Qt::ImhNone</set>
+   </property>
+   <property name="inputMask">
+    <string extracomment="Nombre"/>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Normal</enum>
+   </property>
+   <property name="dragEnabled">
+    <bool>false</bool>
+   </property>
+   <property name="readOnly">
+    <bool>false</bool>
+   </property>
+   <property name="placeholderText">
+    <string extracomment="nombre">Nombre</string>
+   </property>
+   <property name="clearButtonEnabled">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="APELLIDO">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>130</y>
+     <width>181</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Apellido</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="CORREO">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>210</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Correo</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="CONTRA">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>260</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Contraseña</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="USUARIO">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>170</y>
+     <width>113</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="placeholderText">
+    <string>Usuario</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>180</x>
+     <y>40</y>
+     <width>161</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Registro de Usuario</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>350</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Registrar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>350</y>
+     <width>85</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

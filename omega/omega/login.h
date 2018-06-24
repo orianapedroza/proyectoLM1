@@ -19,6 +19,8 @@ public:
 private slots:
     void on_botonlogin_clicked();
 
+    void on_salir_clicked();
+
 private:
     Ui::login *ui;
     menu x;

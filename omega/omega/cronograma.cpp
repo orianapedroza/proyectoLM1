@@ -74,10 +74,13 @@ cronograma::cronograma(QWidget *parent) :
             qint8 g=2;
             for(int i=0; i<d.size();i=i+2){
                 QChar m = d[i];
-                QTableWidgetItem *da;
-                da = new QTableWidgetItem; // add this line
-                da->setText(m);
-                ui->tableWidget->setItem(numero, g, da);
+                if(m=='1'){
+                    QTableWidgetItem *da;
+                    da = new QTableWidgetItem; // add this line
+                    da->setText(" ");
+                    da->setBackground(QColor(15, 139, 100, 127));
+                    ui->tableWidget->setItem(numero, g, da);
+                }
                 g++;
             }
         ///num++;

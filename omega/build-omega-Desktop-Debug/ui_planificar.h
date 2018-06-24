@@ -46,7 +46,7 @@ public:
     {
         if (planificar->objectName().isEmpty())
             planificar->setObjectName(QStringLiteral("planificar"));
-        planificar->resize(646, 466);
+        planificar->resize(760, 471);
         label = new QLabel(planificar);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(160, 10, 131, 17));

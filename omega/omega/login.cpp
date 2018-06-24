@@ -41,7 +41,7 @@ void login::on_botonlogin_clicked()
         qDebug()<<clave;
 
         if((user.ver_nombre()==nuevo) && (user.ver_contrasenna()==nuevacla) ){
-           this->x.setFixedSize(600,435);
+           this->x.setFixedSize(650,435);
            this->x.show();
            this->hide();
 
@@ -54,4 +54,9 @@ void login::on_botonlogin_clicked()
             QMessageBox::information(this,"Login","Clave invalida, reintente");
             qDebug()<<"Clave incorrecta";
         }
+}
+
+void login::on_salir_clicked()
+{
+    hide();
 }

@@ -29,12 +29,13 @@ public:
     QLineEdit *nombre;
     QLineEdit *clave;
     QPushButton *botonlogin;
+    QPushButton *salir;
 
     void setupUi(QDialog *login)
     {
         if (login->objectName().isEmpty())
             login->setObjectName(QStringLiteral("login"));
-        login->resize(639, 466);
+        login->resize(760, 471);
         nombrelogin = new QLabel(login);
         nombrelogin->setObjectName(QStringLiteral("nombrelogin"));
         nombrelogin->setGeometry(QRect(70, 60, 54, 17));
@@ -50,6 +51,9 @@ public:
         botonlogin = new QPushButton(login);
         botonlogin->setObjectName(QStringLiteral("botonlogin"));
         botonlogin->setGeometry(QRect(140, 210, 85, 27));
+        salir = new QPushButton(login);
+        salir->setObjectName(QStringLiteral("salir"));
+        salir->setGeometry(QRect(300, 210, 85, 27));
 
         retranslateUi(login);
 
@@ -62,6 +66,7 @@ public:
         nombrelogin->setText(QApplication::translate("login", "Nombre", 0));
         clavelogin->setText(QApplication::translate("login", "Clave", 0));
         botonlogin->setText(QApplication::translate("login", "Entrar", 0));
+        salir->setText(QApplication::translate("login", "Salir", 0));
     } // retranslateUi
 
 };
