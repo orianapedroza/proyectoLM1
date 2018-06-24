@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cronograma</class>
+ <widget class="QDialog" name="cronograma">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>630</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>60</y>
+     <width>611</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>611</width>
+     <height>192</height>
+    </size>
+   </property>
+   <column>
+    <property name="text">
+     <string>Hora</string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Actividades                                                                                        </string>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Lun</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Mar</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Mie</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Jue</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Vie</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sab</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Dom</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
