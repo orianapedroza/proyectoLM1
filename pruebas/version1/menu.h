@@ -2,7 +2,6 @@
 #define MENU_H
 
 #include <QDialog>
-#include "actividades.h"
 #include "planificar.h"
 #include "cronograma.h"
 
@@ -25,7 +24,6 @@ private slots:
 
 private:
     Ui::menu *ui;
-    Actividades t;
     planificar r;
     cronograma p;
 
