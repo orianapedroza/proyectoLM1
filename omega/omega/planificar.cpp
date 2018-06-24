@@ -59,5 +59,9 @@ void planificar::on_botonagregar_clicked()
 
 void planificar::on_regresar_clicked()
 {
+
+    std::ifstream nuevo;
+    nuevo.open("../bd/Entrada.txt");
+    nuevo.close();
     this->hide();
 }
