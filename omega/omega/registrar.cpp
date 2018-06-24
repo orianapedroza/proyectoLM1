@@ -5,13 +5,15 @@
 #include <QPixmap>
 #include <QDebug>
 #include <QMessageBox>
+#include <fstream>
+#include <iostream>
 
 registrar::registrar(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::registrar)
 {
     ui->setupUi(this);
-    QPixmap bkgnd("/home/maferg/Proyecto/proyectoLM1/pruebas/bonito3.jpg");
+    QPixmap bkgnd("../bonito3.jpg");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
@@ -58,6 +60,16 @@ void registrar::on_pushButton_clicked()
             }
         }
     }
+    std::string nu;
+    nu= "../bd/" + usu.toStdString()+con.toStdString() + ".txt";
+    QString n = QString::fromStdString(nu);
+    qDebug()<<n;
+
+    std::fstream arc(nu.c_str(), std::ios::out | std::ios::in );
+            if (!arc.is_open())
+                qDebug()<<"No Entramos";
+            else qDebug()<<"Entramos";
+
 
     qDebug()<<nom;
     qDebug()<<ape;
