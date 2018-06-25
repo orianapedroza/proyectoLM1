@@ -6,6 +6,7 @@
 #include <fstream>
 #include <vector>
 #include <string>
+#include <QMessageBox>
 
 modi::modi(QWidget *parent) :
     QDialog(parent),
@@ -14,7 +15,7 @@ modi::modi(QWidget *parent) :
     ui->setupUi(this);
 
     this->setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,this->size(),qApp->desktop()->availableGeometry()));
-    QPixmap bkgnd("/home/maferg/Proyecto/proyectoLM1/pruebas/bonito3.jpg");
+    QPixmap bkgnd("../bonito3.jpg");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
     palette.setBrush(QPalette::Background, bkgnd);
@@ -187,5 +188,7 @@ void modi::on_AGREGAR_clicked()
 
                 }
             }
+    QMessageBox::information(this,"Registro","Registro modificado");
+
 
 }

@@ -34,7 +34,7 @@
     <string>Planificar</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -164,11 +164,6 @@
           <item>
            <property name="text">
             <string>PM</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>M</string>
            </property>
           </item>
          </widget>
@@ -303,7 +298,7 @@
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>170</x>
@@ -362,28 +357,9 @@
     </item>
    </layout>
   </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>layoutWidget</zorder>
   <zorder>label</zorder>
-  <zorder>dom</zorder>
-  <zorder>sab</zorder>
-  <zorder>mier</zorder>
-  <zorder>jue</zorder>
-  <zorder>vie</zorder>
-  <zorder>lun</zorder>
-  <zorder>mar</zorder>
-  <zorder>actividad_2</zorder>
-  <zorder>hora_3</zorder>
-  <zorder>min_3</zorder>
-  <zorder>universal</zorder>
-  <zorder>label_2</zorder>
-  <zorder>label_3</zorder>
-  <zorder>TIPO</zorder>
-  <zorder>AGREGAR</zorder>
-  <zorder>REGRESAR</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>horizontalSpacer_2</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>verticalSpacer</zorder>
-  <zorder>horizontalSpacer</zorder>
  </widget>
  <resources>
   <include location="icono.qrc"/>

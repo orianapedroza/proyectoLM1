@@ -32,7 +32,7 @@ class Ui_planificar
 {
 public:
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
@@ -54,7 +54,7 @@ public:
     QCheckBox *vie;
     QCheckBox *sab;
     QCheckBox *dom;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout_3;
     QCommandLinkButton *AGREGAR;
     QSpacerItem *horizontalSpacer;
@@ -74,17 +74,17 @@ public:
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
-        widget = new QWidget(planificar);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(170, 110, 449, 186));
-        verticalLayout_4 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(planificar);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(170, 110, 449, 186));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget);
         verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        label_2 = new QLabel(widget);
+        label_2 = new QLabel(layoutWidget);
         label_2->setObjectName(QStringLiteral("label_2"));
         QFont font1;
         font1.setFamily(QStringLiteral("Padauk"));
@@ -93,7 +93,7 @@ public:
 
         verticalLayout->addWidget(label_2);
 
-        hora_3 = new QSpinBox(widget);
+        hora_3 = new QSpinBox(layoutWidget);
         hora_3->setObjectName(QStringLiteral("hora_3"));
         hora_3->setAccelerated(false);
         hora_3->setMinimum(0);
@@ -108,13 +108,13 @@ public:
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        label_3 = new QLabel(widget);
+        label_3 = new QLabel(layoutWidget);
         label_3->setObjectName(QStringLiteral("label_3"));
         label_3->setFont(font1);
 
         verticalLayout_2->addWidget(label_3);
 
-        min_3 = new QSpinBox(widget);
+        min_3 = new QSpinBox(layoutWidget);
         min_3->setObjectName(QStringLiteral("min_3"));
         min_3->setMaximum(59);
 
@@ -129,7 +129,7 @@ public:
 
         verticalLayout_3->addItem(verticalSpacer);
 
-        universal = new QComboBox(widget);
+        universal = new QComboBox(layoutWidget);
         universal->setObjectName(QStringLiteral("universal"));
         universal->setEditable(true);
         universal->setMaxVisibleItems(3);
@@ -145,20 +145,20 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout);
 
-        actividad_2 = new QLineEdit(widget);
+        actividad_2 = new QLineEdit(layoutWidget);
         actividad_2->setObjectName(QStringLiteral("actividad_2"));
         actividad_2->setClearButtonEnabled(true);
 
         verticalLayout_4->addWidget(actividad_2);
 
-        TIPO = new QComboBox(widget);
+        TIPO = new QComboBox(layoutWidget);
         TIPO->setObjectName(QStringLiteral("TIPO"));
 
         verticalLayout_4->addWidget(TIPO);
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
-        lun = new QCheckBox(widget);
+        lun = new QCheckBox(layoutWidget);
         lun->setObjectName(QStringLiteral("lun"));
         QFont font2;
         font2.setFamily(QStringLiteral("Padauk"));
@@ -167,37 +167,37 @@ public:
 
         horizontalLayout_2->addWidget(lun);
 
-        mar = new QCheckBox(widget);
+        mar = new QCheckBox(layoutWidget);
         mar->setObjectName(QStringLiteral("mar"));
         mar->setFont(font2);
 
         horizontalLayout_2->addWidget(mar);
 
-        mier = new QCheckBox(widget);
+        mier = new QCheckBox(layoutWidget);
         mier->setObjectName(QStringLiteral("mier"));
         mier->setFont(font2);
 
         horizontalLayout_2->addWidget(mier);
 
-        jue = new QCheckBox(widget);
+        jue = new QCheckBox(layoutWidget);
         jue->setObjectName(QStringLiteral("jue"));
         jue->setFont(font2);
 
         horizontalLayout_2->addWidget(jue);
 
-        vie = new QCheckBox(widget);
+        vie = new QCheckBox(layoutWidget);
         vie->setObjectName(QStringLiteral("vie"));
         vie->setFont(font2);
 
         horizontalLayout_2->addWidget(vie);
 
-        sab = new QCheckBox(widget);
+        sab = new QCheckBox(layoutWidget);
         sab->setObjectName(QStringLiteral("sab"));
         sab->setFont(font2);
 
         horizontalLayout_2->addWidget(sab);
 
-        dom = new QCheckBox(widget);
+        dom = new QCheckBox(layoutWidget);
         dom->setObjectName(QStringLiteral("dom"));
         dom->setFont(font2);
 
@@ -206,13 +206,13 @@ public:
 
         verticalLayout_4->addLayout(horizontalLayout_2);
 
-        widget1 = new QWidget(planificar);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(170, 330, 451, 50));
-        horizontalLayout_3 = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(planificar);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(170, 330, 451, 50));
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget1);
         horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
-        AGREGAR = new QCommandLinkButton(widget1);
+        AGREGAR = new QCommandLinkButton(layoutWidget1);
         AGREGAR->setObjectName(QStringLiteral("AGREGAR"));
         AGREGAR->setFont(font2);
         QIcon icon;
@@ -225,7 +225,7 @@ public:
 
         horizontalLayout_3->addItem(horizontalSpacer);
 
-        REGRESAR = new QCommandLinkButton(widget1);
+        REGRESAR = new QCommandLinkButton(layoutWidget1);
         REGRESAR->setObjectName(QStringLiteral("REGRESAR"));
         REGRESAR->setFont(font2);
         QIcon icon1;
@@ -234,23 +234,9 @@ public:
 
         horizontalLayout_3->addWidget(REGRESAR);
 
+        layoutWidget->raise();
+        layoutWidget->raise();
         label->raise();
-        dom->raise();
-        sab->raise();
-        mier->raise();
-        jue->raise();
-        vie->raise();
-        lun->raise();
-        mar->raise();
-        actividad_2->raise();
-        hora_3->raise();
-        min_3->raise();
-        universal->raise();
-        label_2->raise();
-        label_3->raise();
-        TIPO->raise();
-        AGREGAR->raise();
-        REGRESAR->raise();
 
         retranslateUi(planificar);
 
@@ -272,7 +258,6 @@ public:
         universal->insertItems(0, QStringList()
          << QApplication::translate("planificar", "AM", 0)
          << QApplication::translate("planificar", "PM", 0)
-         << QApplication::translate("planificar", "M", 0)
         );
 #ifndef QT_NO_TOOLTIP
         universal->setToolTip(QString());

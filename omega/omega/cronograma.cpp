@@ -186,7 +186,7 @@ void cronograma::vercro(){
 
 void cronograma::on_REGRESAR_clicked()
 {
-    this->hide();
+    this->close();
 }
 
 void cronograma::on_MODIFICAR_clicked()
