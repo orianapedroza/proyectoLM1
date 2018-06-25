@@ -324,6 +324,10 @@
       <property name="text">
        <string>Agregar</string>
       </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/gua.png</normaloff>:/new/prefix1/gua.png</iconset>
+      </property>
      </widget>
     </item>
     <item>
@@ -349,6 +353,10 @@
       </property>
       <property name="text">
        <string>Regresar</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/regre.png</normaloff>:/new/prefix1/regre.png</iconset>
       </property>
      </widget>
     </item>
@@ -377,6 +385,8 @@
   <zorder>verticalSpacer</zorder>
   <zorder>horizontalSpacer</zorder>
  </widget>
- <resources/>
+ <resources>
+  <include location="icono.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -63,7 +63,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;justify&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;Pretende ser una guíapara los estudiantes que cursan la asignatura “Programación 1” (en cuanto a la organizacion del tiempo), la cual está divida en tres etapas: planificación, asistencia a clases y práctica.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>12</x>
@@ -137,7 +137,7 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="icon">
        <iconset resource="icono.qrc">
-        <normaloff>:/new/prefix1/icons.ico</normaloff>:/new/prefix1/icons.ico</iconset>
+        <normaloff>:/new/prefix1/regis.png</normaloff>:/new/prefix1/regis.png</iconset>
       </property>
      </widget>
     </item>
@@ -164,6 +164,10 @@ p, li { white-space: pre-wrap; }
       </property>
       <property name="text">
        <string>Salir</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/salir.png</normaloff>:/new/prefix1/salir.png</iconset>
       </property>
      </widget>
     </item>

@@ -162,6 +162,10 @@
       <property name="text">
        <string>Registrar</string>
       </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/icons.png</normaloff>:/new/prefix1/icons.png</iconset>
+      </property>
      </widget>
     </item>
     <item>
@@ -188,11 +192,17 @@
       <property name="text">
        <string>Salir</string>
       </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/salir.png</normaloff>:/new/prefix1/salir.png</iconset>
+      </property>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icono.qrc"/>
+ </resources>
  <connections/>
 </ui>

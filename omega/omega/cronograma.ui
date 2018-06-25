@@ -156,19 +156,6 @@
     </property>
    </column>
   </widget>
-  <widget class="QPushButton" name="regresar">
-   <property name="geometry">
-    <rect>
-     <x>330</x>
-     <y>420</y>
-     <width>85</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Regresar</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
@@ -190,7 +177,59 @@
     <string>Cronograma</string>
    </property>
   </widget>
+  <widget class="QCommandLinkButton" name="REGRESAR">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>430</y>
+     <width>168</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Padauk</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Regresar</string>
+   </property>
+   <property name="icon">
+    <iconset resource="icono.qrc">
+     <normaloff>:/new/prefix1/regre.png</normaloff>:/new/prefix1/regre.png</iconset>
+   </property>
+  </widget>
+  <widget class="QCommandLinkButton" name="MODIFICAR">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>430</y>
+     <width>168</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Padauk</family>
+     <pointsize>14</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Modificar</string>
+   </property>
+   <property name="icon">
+    <iconset resource="icono.qrc">
+     <normaloff>:/new/prefix1/icons(1).png</normaloff>:/new/prefix1/icons(1).png</iconset>
+   </property>
+  </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icono.qrc"/>
+ </resources>
  <connections/>
 </ui>

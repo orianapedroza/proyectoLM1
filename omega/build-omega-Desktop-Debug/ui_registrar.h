@@ -114,6 +114,9 @@ public:
         font1.setFamily(QStringLiteral("Padauk"));
         font1.setPointSize(14);
         REGISTRAR->setFont(font1);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/icons.png"), QSize(), QIcon::Normal, QIcon::Off);
+        REGISTRAR->setIcon(icon);
 
         horizontalLayout->addWidget(REGISTRAR);
 
@@ -124,6 +127,9 @@ public:
         SALIR = new QCommandLinkButton(layoutWidget1);
         SALIR->setObjectName(QStringLiteral("SALIR"));
         SALIR->setFont(font1);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/salir.png"), QSize(), QIcon::Normal, QIcon::Off);
+        SALIR->setIcon(icon1);
 
         horizontalLayout->addWidget(SALIR);
 

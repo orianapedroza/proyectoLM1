@@ -28,7 +28,7 @@ class Ui_pres
 public:
     QLabel *label;
     QTextBrowser *textBrowser;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer_3;
     QCommandLinkButton *ingresar;
@@ -59,10 +59,10 @@ public:
         textBrowser->setFrameShadow(QFrame::Plain);
         textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
         textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        widget = new QWidget(pres);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(12, 313, 707, 50));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(pres);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(12, 313, 707, 50));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
@@ -71,7 +71,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_3);
 
-        ingresar = new QCommandLinkButton(widget);
+        ingresar = new QCommandLinkButton(layoutWidget);
         ingresar->setObjectName(QStringLiteral("ingresar"));
         QFont font1;
         font1.setFamily(QStringLiteral("Padauk"));
@@ -90,7 +90,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer_2);
 
-        registrar = new QCommandLinkButton(widget);
+        registrar = new QCommandLinkButton(layoutWidget);
         registrar->setObjectName(QStringLiteral("registrar"));
         QFont font2;
         font2.setFamily(QStringLiteral("Padauk Book [PYRS]"));
@@ -100,7 +100,7 @@ public:
         font2.setWeight(75);
         registrar->setFont(font2);
         QIcon icon1;
-        icon1.addFile(QStringLiteral(":/new/prefix1/icons.ico"), QSize(), QIcon::Normal, QIcon::Off);
+        icon1.addFile(QStringLiteral(":/new/prefix1/regis.png"), QSize(), QIcon::Normal, QIcon::Off);
         registrar->setIcon(icon1);
 
         horizontalLayout->addWidget(registrar);
@@ -109,12 +109,15 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        SALIR = new QCommandLinkButton(widget);
+        SALIR = new QCommandLinkButton(layoutWidget);
         SALIR->setObjectName(QStringLiteral("SALIR"));
         QFont font3;
         font3.setFamily(QStringLiteral("Padauk"));
         font3.setPointSize(14);
         SALIR->setFont(font3);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/new/prefix1/salir.png"), QSize(), QIcon::Normal, QIcon::Off);
+        SALIR->setIcon(icon2);
 
         horizontalLayout->addWidget(SALIR);
 

@@ -367,10 +367,18 @@ compiler_rcc_clean:
 qrc_icono.cpp: ../omega/icono.qrc \
 		../omega/icons(2).png \
 		../omega/icons.png \
+		../omega/gua(1).png \
 		../omega/logo.png \
+		../omega/videos.png \
+		../omega/gua.png \
 		../omega/icons(1).png \
 		../omega/u.png \
-		../omega/icons.ico
+		../omega/regre.png \
+		../omega/icons.ico \
+		../omega/salir.png \
+		../omega/entrar.png \
+		../omega/regis.png \
+		../omega/apu.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name icono ../omega/icono.qrc -o qrc_icono.cpp
 
 compiler_moc_header_make_all: moc_pres.cpp moc_cronograma.cpp moc_login.cpp moc_menu.cpp moc_planificar.cpp moc_registrar.cpp

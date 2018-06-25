@@ -101,11 +101,7 @@ cronograma::~cronograma()
     delete ui;
 }
 
-void cronograma::on_regresar_clicked()
-{
-    this->hide();
 
-}
 void cronograma::vercro(){
 
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
@@ -184,5 +180,15 @@ void cronograma::vercro(){
             numero++;
         }
         nuevo.close();
+
+}
+
+void cronograma::on_REGRESAR_clicked()
+{
+    this->hide();
+}
+
+void cronograma::on_MODIFICAR_clicked()
+{
 
 }

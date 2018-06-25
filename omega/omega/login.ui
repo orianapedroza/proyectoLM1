@@ -92,6 +92,10 @@
       <property name="text">
        <string>Entrar</string>
       </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/entrar.png</normaloff>:/new/prefix1/entrar.png</iconset>
+      </property>
      </widget>
     </item>
     <item>
@@ -120,12 +124,18 @@
       <property name="text">
        <string>Salir</string>
       </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/salir.png</normaloff>:/new/prefix1/salir.png</iconset>
+      </property>
      </widget>
     </item>
    </layout>
   </widget>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="icono.qrc"/>
+ </resources>
  <connections/>
 </ui>

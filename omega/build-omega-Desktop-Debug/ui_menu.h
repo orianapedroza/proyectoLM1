@@ -60,6 +60,9 @@ public:
         font1.setFamily(QStringLiteral("Padauk"));
         font1.setPointSize(14);
         SALIR->setFont(font1);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/salir.png"), QSize(), QIcon::Normal, QIcon::Off);
+        SALIR->setIcon(icon);
         widget = new QWidget(menu);
         widget->setObjectName(QStringLiteral("widget"));
         widget->setGeometry(QRect(200, 150, 394, 50));
@@ -69,9 +72,9 @@ public:
         PLANIFICAR = new QCommandLinkButton(widget);
         PLANIFICAR->setObjectName(QStringLiteral("PLANIFICAR"));
         PLANIFICAR->setFont(font1);
-        QIcon icon;
-        icon.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        PLANIFICAR->setIcon(icon);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/regis.png"), QSize(), QIcon::Normal, QIcon::Off);
+        PLANIFICAR->setIcon(icon1);
 
         horizontalLayout->addWidget(PLANIFICAR);
 
@@ -82,6 +85,9 @@ public:
         APUNTES = new QCommandLinkButton(widget);
         APUNTES->setObjectName(QStringLiteral("APUNTES"));
         APUNTES->setFont(font1);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/new/prefix1/apu.png"), QSize(), QIcon::Normal, QIcon::Off);
+        APUNTES->setIcon(icon2);
 
         horizontalLayout->addWidget(APUNTES);
 
@@ -94,9 +100,9 @@ public:
         VER = new QCommandLinkButton(widget1);
         VER->setObjectName(QStringLiteral("VER"));
         VER->setFont(font1);
-        QIcon icon1;
-        icon1.addFile(QStringLiteral(":/new/prefix1/icons(2).png"), QSize(), QIcon::Normal, QIcon::Off);
-        VER->setIcon(icon1);
+        QIcon icon3;
+        icon3.addFile(QStringLiteral(":/new/prefix1/gua(1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        VER->setIcon(icon3);
 
         horizontalLayout_2->addWidget(VER);
 
@@ -107,6 +113,9 @@ public:
         VIDEOS = new QCommandLinkButton(widget1);
         VIDEOS->setObjectName(QStringLiteral("VIDEOS"));
         VIDEOS->setFont(font1);
+        QIcon icon4;
+        icon4.addFile(QStringLiteral(":/new/prefix1/videos.png"), QSize(), QIcon::Normal, QIcon::Off);
+        VIDEOS->setIcon(icon4);
 
         horizontalLayout_2->addWidget(VIDEOS);
 

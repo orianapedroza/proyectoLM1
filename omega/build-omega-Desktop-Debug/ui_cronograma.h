@@ -13,10 +13,10 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableWidget>
 
 QT_BEGIN_NAMESPACE
@@ -25,8 +25,9 @@ class Ui_cronograma
 {
 public:
     QTableWidget *tableWidget;
-    QPushButton *regresar;
     QLabel *label;
+    QCommandLinkButton *REGRESAR;
+    QCommandLinkButton *MODIFICAR;
 
     void setupUi(QDialog *cronograma)
     {
@@ -89,9 +90,6 @@ public:
         font3.setFamily(QStringLiteral("Padauk"));
         font3.setPointSize(12);
         tableWidget->setFont(font3);
-        regresar = new QPushButton(cronograma);
-        regresar->setObjectName(QStringLiteral("regresar"));
-        regresar->setGeometry(QRect(330, 420, 85, 27));
         label = new QLabel(cronograma);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(280, 20, 231, 31));
@@ -101,6 +99,25 @@ public:
         font4.setBold(true);
         font4.setWeight(75);
         label->setFont(font4);
+        REGRESAR = new QCommandLinkButton(cronograma);
+        REGRESAR->setObjectName(QStringLiteral("REGRESAR"));
+        REGRESAR->setGeometry(QRect(80, 430, 168, 41));
+        QFont font5;
+        font5.setFamily(QStringLiteral("Padauk"));
+        font5.setPointSize(14);
+        font5.setBold(true);
+        font5.setWeight(75);
+        REGRESAR->setFont(font5);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/regre.png"), QSize(), QIcon::Normal, QIcon::Off);
+        REGRESAR->setIcon(icon);
+        MODIFICAR = new QCommandLinkButton(cronograma);
+        MODIFICAR->setObjectName(QStringLiteral("MODIFICAR"));
+        MODIFICAR->setGeometry(QRect(400, 430, 168, 41));
+        MODIFICAR->setFont(font5);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        MODIFICAR->setIcon(icon1);
 
         retranslateUi(cronograma);
 
@@ -128,8 +145,9 @@ public:
         ___qtablewidgetitem7->setText(QApplication::translate("cronograma", "Sab", 0));
         QTableWidgetItem *___qtablewidgetitem8 = tableWidget->horizontalHeaderItem(8);
         ___qtablewidgetitem8->setText(QApplication::translate("cronograma", "Dom", 0));
-        regresar->setText(QApplication::translate("cronograma", "Regresar", 0));
         label->setText(QApplication::translate("cronograma", "Cronograma", 0));
+        REGRESAR->setText(QApplication::translate("cronograma", "Regresar", 0));
+        MODIFICAR->setText(QApplication::translate("cronograma", "Modificar", 0));
     } // retranslateUi
 
 };

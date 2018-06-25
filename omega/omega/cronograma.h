@@ -18,7 +18,10 @@ public:
     ~cronograma();
 
 private slots:
-    void on_regresar_clicked();
+
+    void on_REGRESAR_clicked();
+
+    void on_MODIFICAR_clicked();
 
 private:
     Ui::cronograma *ui;

@@ -90,6 +90,9 @@ public:
         font1.setBold(true);
         font1.setWeight(75);
         ENTRAR->setFont(font1);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/entrar.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ENTRAR->setIcon(icon);
 
         horizontalLayout->addWidget(ENTRAR);
 
@@ -100,6 +103,9 @@ public:
         commandLinkButton = new QCommandLinkButton(widget1);
         commandLinkButton->setObjectName(QStringLiteral("commandLinkButton"));
         commandLinkButton->setFont(font1);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/salir.png"), QSize(), QIcon::Normal, QIcon::Off);
+        commandLinkButton->setIcon(icon1);
 
         horizontalLayout->addWidget(commandLinkButton);
 

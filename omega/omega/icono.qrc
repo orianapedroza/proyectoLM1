@@ -6,5 +6,13 @@
         <file>icons.png</file>
         <file>u.png</file>
         <file>icons.ico</file>
+        <file>apu.png</file>
+        <file>entrar.png</file>
+        <file>regis.png</file>
+        <file>regre.png</file>
+        <file>salir.png</file>
+        <file>videos.png</file>
+        <file>gua.png</file>
+        <file>gua(1).png</file>
     </qresource>
 </RCC>

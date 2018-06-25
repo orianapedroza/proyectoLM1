@@ -52,6 +52,10 @@
    <property name="text">
     <string>Salir</string>
    </property>
+   <property name="icon">
+    <iconset resource="icono.qrc">
+     <normaloff>:/new/prefix1/salir.png</normaloff>:/new/prefix1/salir.png</iconset>
+   </property>
   </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
@@ -76,7 +80,7 @@
       </property>
       <property name="icon">
        <iconset resource="icono.qrc">
-        <normaloff>:/new/prefix1/icons(1).png</normaloff>:/new/prefix1/icons(1).png</iconset>
+        <normaloff>:/new/prefix1/regis.png</normaloff>:/new/prefix1/regis.png</iconset>
       </property>
      </widget>
     </item>
@@ -103,6 +107,10 @@
       </property>
       <property name="text">
        <string>Apuntes</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/apu.png</normaloff>:/new/prefix1/apu.png</iconset>
       </property>
      </widget>
     </item>
@@ -131,7 +139,7 @@
       </property>
       <property name="icon">
        <iconset resource="icono.qrc">
-        <normaloff>:/new/prefix1/icons(2).png</normaloff>:/new/prefix1/icons(2).png</iconset>
+        <normaloff>:/new/prefix1/gua(1).png</normaloff>:/new/prefix1/gua(1).png</iconset>
       </property>
      </widget>
     </item>
@@ -158,6 +166,10 @@
       </property>
       <property name="text">
        <string>Videos</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/videos.png</normaloff>:/new/prefix1/videos.png</iconset>
       </property>
      </widget>
     </item>

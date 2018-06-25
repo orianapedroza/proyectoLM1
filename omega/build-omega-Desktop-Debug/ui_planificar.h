@@ -215,6 +215,9 @@ public:
         AGREGAR = new QCommandLinkButton(widget1);
         AGREGAR->setObjectName(QStringLiteral("AGREGAR"));
         AGREGAR->setFont(font2);
+        QIcon icon;
+        icon.addFile(QStringLiteral(":/new/prefix1/gua.png"), QSize(), QIcon::Normal, QIcon::Off);
+        AGREGAR->setIcon(icon);
 
         horizontalLayout_3->addWidget(AGREGAR);
 
@@ -225,6 +228,9 @@ public:
         REGRESAR = new QCommandLinkButton(widget1);
         REGRESAR->setObjectName(QStringLiteral("REGRESAR"));
         REGRESAR->setFont(font2);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/regre.png"), QSize(), QIcon::Normal, QIcon::Off);
+        REGRESAR->setIcon(icon1);
 
         horizontalLayout_3->addWidget(REGRESAR);
 
