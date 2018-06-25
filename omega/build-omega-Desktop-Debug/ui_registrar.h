@@ -28,14 +28,14 @@ class Ui_registrar
 {
 public:
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QLineEdit *NOMBRE;
     QLineEdit *APELLIDO;
     QLineEdit *USUARIO;
     QLineEdit *CORREO;
     QLineEdit *CONTRA;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QHBoxLayout *horizontalLayout;
     QCommandLinkButton *REGISTRAR;
     QSpacerItem *horizontalSpacer;
@@ -59,13 +59,13 @@ public:
         font.setBold(true);
         font.setWeight(75);
         label->setFont(font);
-        widget = new QWidget(registrar);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(210, 60, 291, 271));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(registrar);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(210, 60, 291, 271));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        NOMBRE = new QLineEdit(widget);
+        NOMBRE = new QLineEdit(layoutWidget);
         NOMBRE->setObjectName(QStringLiteral("NOMBRE"));
         NOMBRE->setLayoutDirection(Qt::LeftToRight);
         NOMBRE->setAutoFillBackground(true);
@@ -78,33 +78,37 @@ public:
 
         verticalLayout->addWidget(NOMBRE);
 
-        APELLIDO = new QLineEdit(widget);
+        APELLIDO = new QLineEdit(layoutWidget);
         APELLIDO->setObjectName(QStringLiteral("APELLIDO"));
+        APELLIDO->setClearButtonEnabled(true);
 
         verticalLayout->addWidget(APELLIDO);
 
-        USUARIO = new QLineEdit(widget);
+        USUARIO = new QLineEdit(layoutWidget);
         USUARIO->setObjectName(QStringLiteral("USUARIO"));
+        USUARIO->setClearButtonEnabled(true);
 
         verticalLayout->addWidget(USUARIO);
 
-        CORREO = new QLineEdit(widget);
+        CORREO = new QLineEdit(layoutWidget);
         CORREO->setObjectName(QStringLiteral("CORREO"));
+        CORREO->setClearButtonEnabled(true);
 
         verticalLayout->addWidget(CORREO);
 
-        CONTRA = new QLineEdit(widget);
+        CONTRA = new QLineEdit(layoutWidget);
         CONTRA->setObjectName(QStringLiteral("CONTRA"));
+        CONTRA->setClearButtonEnabled(true);
 
         verticalLayout->addWidget(CONTRA);
 
-        widget1 = new QWidget(registrar);
-        widget1->setObjectName(QStringLiteral("widget1"));
-        widget1->setGeometry(QRect(170, 330, 431, 50));
-        horizontalLayout = new QHBoxLayout(widget1);
+        layoutWidget1 = new QWidget(registrar);
+        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(170, 330, 431, 50));
+        horizontalLayout = new QHBoxLayout(layoutWidget1);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        REGISTRAR = new QCommandLinkButton(widget1);
+        REGISTRAR = new QCommandLinkButton(layoutWidget1);
         REGISTRAR->setObjectName(QStringLiteral("REGISTRAR"));
         QFont font1;
         font1.setFamily(QStringLiteral("Padauk"));
@@ -117,7 +121,7 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        SALIR = new QCommandLinkButton(widget1);
+        SALIR = new QCommandLinkButton(layoutWidget1);
         SALIR->setObjectName(QStringLiteral("SALIR"));
         SALIR->setFont(font1);
 

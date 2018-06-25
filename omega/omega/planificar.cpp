@@ -3,6 +3,8 @@
 #include <fstream>
 #include <QDebug>
 #include <QPixmap>
+#include <QMessageBox>
+
 planificar::planificar(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::planificar)
@@ -22,7 +24,7 @@ planificar::~planificar()
     delete ui;
 }
 
-void planificar::on_botonagregar_clicked()
+void planificar::on_AGREGAR_clicked()
 {
     //QString hor = ui->hora_2->text();
     QString hor3 = ui->hora_3->text();
@@ -30,7 +32,7 @@ void planificar::on_botonagregar_clicked()
     QString uni = ui->universal->currentText();
     QString Hf = hor3 +":"+ min+uni ;
     QString act = ui->actividad_2->text();
-    QString tipo = ui->tipoact_2->text();
+    QString tipo = ui->TIPO->currentText();
 
     bool lun = ui->lun->checkState();
     bool mar = ui->mar->checkState();
@@ -72,23 +74,10 @@ void planificar::on_botonagregar_clicked()
     salida<<h<<"#"<<a<<"#"<<t<<"#"<<lun<<"#"<<mar<<"#"<<mie<<"#"<<jue<<"#"<<vie<<"#"<<sab<<"#"<<dom<<'\n';
 
     salida.close();
+    QMessageBox::information(this,"Registro","Registro existoso");
 }
 
-
-void planificar::on_regresar_clicked()
+void planificar::on_REGRESAR_clicked()
 {
-
-   /* std::ifstream otro;
-    otro.open("../bd/actual.txt");
-    std::string num;
-
-        getline(otro, num, '\n');
-
-
-    otro.close();
-
-    std::ofstream nuevo;
-    nuevo.open(num.c_str());
-    nuevo.close();*/
-    this->close();
+        this->close();
 }

@@ -109,12 +109,12 @@ void cronograma::on_regresar_clicked()
 void cronograma::vercro(){
 
     ui->tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::ResizeToContents);
-    QTableWidgetItem *itab;
+   /* QTableWidgetItem *itab;
     itab = new QTableWidgetItem; // add this line
-    itab->setText("9am");
+    itab->setText("9am");*/
 
 
-    ui->tableWidget->setItem(0, 0, itab);
+    ///ui->tableWidget->setItem(0, 0, itab);
    std::ifstream otro;
        otro.open("../bd/actual.txt");
        std::string num;

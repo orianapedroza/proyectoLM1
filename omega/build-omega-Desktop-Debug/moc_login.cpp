@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_login_t {
     QByteArrayData data[4];
-    char stringdata0[46];
+    char stringdata0[54];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,13 +30,13 @@ struct qt_meta_stringdata_login_t {
 static const qt_meta_stringdata_login_t qt_meta_stringdata_login = {
     {
 QT_MOC_LITERAL(0, 0, 5), // "login"
-QT_MOC_LITERAL(1, 6, 21), // "on_botonlogin_clicked"
-QT_MOC_LITERAL(2, 28, 0), // ""
-QT_MOC_LITERAL(3, 29, 16) // "on_salir_clicked"
+QT_MOC_LITERAL(1, 6, 17), // "on_ENTRAR_clicked"
+QT_MOC_LITERAL(2, 24, 0), // ""
+QT_MOC_LITERAL(3, 25, 28) // "on_commandLinkButton_clicked"
 
     },
-    "login\0on_botonlogin_clicked\0\0"
-    "on_salir_clicked"
+    "login\0on_ENTRAR_clicked\0\0"
+    "on_commandLinkButton_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,8 +70,8 @@ void login::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         login *_t = static_cast<login *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_botonlogin_clicked(); break;
-        case 1: _t->on_salir_clicked(); break;
+        case 0: _t->on_ENTRAR_clicked(); break;
+        case 1: _t->on_commandLinkButton_clicked(); break;
         default: ;
         }
     }

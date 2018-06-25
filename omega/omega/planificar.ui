@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
-    <height>471</height>
+    <width>800</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,298 +16,366 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>160</x>
-     <y>10</y>
-     <width>131</width>
-     <height>17</height>
+     <x>330</x>
+     <y>20</y>
+     <width>181</width>
+     <height>71</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Padauk</family>
+     <pointsize>28</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="text">
     <string>Planificar</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="regresar">
-   <property name="geometry">
-    <rect>
-     <x>470</x>
-     <y>240</y>
-     <width>85</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Regresar</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="botonagregar">
-   <property name="geometry">
-    <rect>
-     <x>248</x>
-     <y>242</y>
-     <width>85</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Agregar</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="dom">
-   <property name="geometry">
-    <rect>
-     <x>420</x>
-     <y>171</y>
-     <width>57</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Dom</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="sab">
-   <property name="geometry">
-    <rect>
-     <x>360</x>
-     <y>171</y>
-     <width>50</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Sab</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="mier">
-   <property name="geometry">
-    <rect>
-     <x>181</x>
-     <y>171</y>
-     <width>50</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Mie</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="jue">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>171</y>
-     <width>47</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Jue</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="vie">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>171</y>
-     <width>47</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Vie</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="lun">
-   <property name="geometry">
-    <rect>
-     <x>61</x>
-     <y>171</y>
-     <width>51</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Lun</string>
-   </property>
-  </widget>
-  <widget class="QCheckBox" name="mar">
-   <property name="geometry">
-    <rect>
-     <x>121</x>
-     <y>171</y>
-     <width>52</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Mar</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="tipoact_2">
-   <property name="geometry">
-    <rect>
-     <x>176</x>
-     <y>111</y>
-     <width>112</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="tipoact">
-   <property name="geometry">
-    <rect>
-     <x>71</x>
-     <y>111</y>
-     <width>99</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Tipo de actividad </string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="hora_2">
-   <property name="geometry">
-    <rect>
-     <x>320</x>
-     <y>40</y>
-     <width>112</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="hora">
-   <property name="geometry">
-    <rect>
-     <x>71</x>
-     <y>41</y>
-     <width>28</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Hora</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="actividad">
-   <property name="geometry">
-    <rect>
-     <x>71</x>
-     <y>81</y>
-     <width>52</width>
-     <height>17</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Actividad</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="actividad_2">
-   <property name="geometry">
-    <rect>
-     <x>129</x>
-     <y>81</y>
-     <width>112</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="hora_3">
-   <property name="geometry">
-    <rect>
-     <x>110</x>
-     <y>40</y>
-     <width>45</width>
-     <height>27</height>
-    </rect>
-   </property>
-   <property name="accelerated">
-    <bool>false</bool>
-   </property>
-   <property name="suffix">
-    <string/>
-   </property>
-   <property name="prefix">
-    <string/>
-   </property>
-   <property name="minimum">
-    <number>0</number>
-   </property>
-   <property name="maximum">
-    <number>12</number>
-   </property>
-   <property name="singleStep">
-    <number>1</number>
-   </property>
-   <property name="value">
-    <number>0</number>
-   </property>
-  </widget>
-  <widget class="QSpinBox" name="min_3">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>170</x>
-     <y>40</y>
-     <width>45</width>
-     <height>27</height>
+     <y>110</y>
+     <width>449</width>
+     <height>186</height>
     </rect>
    </property>
-   <property name="maximum">
-    <number>59</number>
-   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_4">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Padauk</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Hora</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="hora_3">
+          <property name="accelerated">
+           <bool>false</bool>
+          </property>
+          <property name="suffix">
+           <string/>
+          </property>
+          <property name="prefix">
+           <string/>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>12</number>
+          </property>
+          <property name="singleStep">
+           <number>1</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="font">
+           <font>
+            <family>Padauk</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Minutos</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="min_3">
+          <property name="maximum">
+           <number>59</number>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QComboBox" name="universal">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="accessibleDescription">
+           <string/>
+          </property>
+          <property name="editable">
+           <bool>true</bool>
+          </property>
+          <property name="currentText">
+           <string>AM</string>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="maxVisibleItems">
+           <number>3</number>
+          </property>
+          <property name="maxCount">
+           <number>3</number>
+          </property>
+          <property name="insertPolicy">
+           <enum>QComboBox::InsertAtCurrent</enum>
+          </property>
+          <property name="sizeAdjustPolicy">
+           <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+          </property>
+          <item>
+           <property name="text">
+            <string>AM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>PM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>M</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="actividad_2">
+      <property name="placeholderText">
+       <string>Ingrese Actividad</string>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="TIPO">
+      <item>
+       <property name="text">
+        <string>Académicas</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rutinarias</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Eventuales</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="lun">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Lun</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="mar">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Mar</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="mier">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Mie</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="jue">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Jue</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="vie">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Vie</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="sab">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Sab</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="dom">
+        <property name="font">
+         <font>
+          <family>Padauk</family>
+          <pointsize>14</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Dom</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
   </widget>
-  <widget class="QComboBox" name="universal">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>40</y>
-     <width>71</width>
-     <height>27</height>
+     <x>170</x>
+     <y>330</y>
+     <width>451</width>
+     <height>50</height>
     </rect>
    </property>
-   <property name="toolTip">
-    <string/>
-   </property>
-   <property name="accessibleDescription">
-    <string/>
-   </property>
-   <property name="editable">
-    <bool>true</bool>
-   </property>
-   <property name="currentText">
-    <string>M</string>
-   </property>
-   <property name="currentIndex">
-    <number>0</number>
-   </property>
-   <property name="maxVisibleItems">
-    <number>3</number>
-   </property>
-   <property name="maxCount">
-    <number>3</number>
-   </property>
-   <property name="insertPolicy">
-    <enum>QComboBox::InsertAtCurrent</enum>
-   </property>
-   <property name="sizeAdjustPolicy">
-    <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
-   </property>
-   <item>
-    <property name="text">
-     <string>AM</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>PM</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>M</string>
-    </property>
-   </item>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item>
+     <widget class="QCommandLinkButton" name="AGREGAR">
+      <property name="font">
+       <font>
+        <family>Padauk</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Agregar</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QCommandLinkButton" name="REGRESAR">
+      <property name="font">
+       <font>
+        <family>Padauk</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Regresar</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
   </widget>
+  <zorder>label</zorder>
+  <zorder>dom</zorder>
+  <zorder>sab</zorder>
+  <zorder>mier</zorder>
+  <zorder>jue</zorder>
+  <zorder>vie</zorder>
+  <zorder>lun</zorder>
+  <zorder>mar</zorder>
+  <zorder>actividad_2</zorder>
+  <zorder>hora_3</zorder>
+  <zorder>min_3</zorder>
+  <zorder>universal</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>TIPO</zorder>
+  <zorder>AGREGAR</zorder>
+  <zorder>REGRESAR</zorder>
+  <zorder>horizontalSpacer_2</zorder>
+  <zorder>horizontalSpacer_2</zorder>
+  <zorder>verticalSpacer</zorder>
+  <zorder>verticalSpacer</zorder>
+  <zorder>horizontalSpacer</zorder>
  </widget>
  <resources/>
  <connections/>

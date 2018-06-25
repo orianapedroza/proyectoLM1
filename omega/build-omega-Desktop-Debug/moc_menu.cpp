@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_menu_t {
     QByteArrayData data[5];
-    char stringdata0[65];
+    char stringdata0[60];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,11 +33,11 @@ QT_MOC_LITERAL(0, 0, 4), // "menu"
 QT_MOC_LITERAL(1, 5, 21), // "on_PLANIFICAR_clicked"
 QT_MOC_LITERAL(2, 27, 0), // ""
 QT_MOC_LITERAL(3, 28, 14), // "on_VER_clicked"
-QT_MOC_LITERAL(4, 43, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(4, 43, 16) // "on_SALIR_clicked"
 
     },
     "menu\0on_PLANIFICAR_clicked\0\0on_VER_clicked\0"
-    "on_pushButton_clicked"
+    "on_SALIR_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -75,7 +75,7 @@ void menu::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         switch (_id) {
         case 0: _t->on_PLANIFICAR_clicked(); break;
         case 1: _t->on_VER_clicked(); break;
-        case 2: _t->on_pushButton_clicked(); break;
+        case 2: _t->on_SALIR_clicked(); break;
         default: ;
         }
     }

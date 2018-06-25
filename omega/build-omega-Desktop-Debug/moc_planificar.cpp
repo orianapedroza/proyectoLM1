@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_planificar_t {
     QByteArrayData data[4];
-    char stringdata0[56];
+    char stringdata0[51];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,13 +30,13 @@ struct qt_meta_stringdata_planificar_t {
 static const qt_meta_stringdata_planificar_t qt_meta_stringdata_planificar = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "planificar"
-QT_MOC_LITERAL(1, 11, 23), // "on_botonagregar_clicked"
-QT_MOC_LITERAL(2, 35, 0), // ""
-QT_MOC_LITERAL(3, 36, 19) // "on_regresar_clicked"
+QT_MOC_LITERAL(1, 11, 18), // "on_AGREGAR_clicked"
+QT_MOC_LITERAL(2, 30, 0), // ""
+QT_MOC_LITERAL(3, 31, 19) // "on_REGRESAR_clicked"
 
     },
-    "planificar\0on_botonagregar_clicked\0\0"
-    "on_regresar_clicked"
+    "planificar\0on_AGREGAR_clicked\0\0"
+    "on_REGRESAR_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -70,8 +70,8 @@ void planificar::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         planificar *_t = static_cast<planificar *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_botonagregar_clicked(); break;
-        case 1: _t->on_regresar_clicked(); break;
+        case 0: _t->on_AGREGAR_clicked(); break;
+        case 1: _t->on_REGRESAR_clicked(); break;
         default: ;
         }
     }

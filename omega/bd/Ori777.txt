@@ -1,5 +1,11 @@
-52#ho#ee#0#0#1#1#0#0#0
-00###0#0#0#0#0#0#0
-1233###0#0#0#0#0#0#0
-1233###0#0#0#0#0#0#0
-4:4PM###0#0#0#0#0#0#0
+4:5AM#Hola#Rutinarias#0#0#1#1#1#0#0
+4:5AM#chap#Rutinarias#0#0#1#1#1#1#1
+4:5AM#chap#Rutinarias#0#0#1#1#1#1#1
+4:5AM#chap#Rutinarias#0#0#1#1#1#1#1
+6:11AM#Dormir#Eventuales#1#0#0#0#0#0#0
+4:6PM#PPPPP#Rutinarias#1#0#0#0#0#0#0
+4:6PM#PPPPP#Rutinarias#1#0#0#0#0#0#0
+4:6PM#PPPPP#Rutinarias#1#0#0#0#0#0#0
+6:9AM#jdjsjd#Académicas#0#1#0#0#0#0#0
+6:6AM#sdsdfs#Académicas#0#1#0#0#0#0#0
+6:6AM#sdsdfs#Académicas#0#1#0#0#0#0#0

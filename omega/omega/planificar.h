@@ -16,10 +16,10 @@ public:
     ~planificar();
 
 private slots:
-    void on_botonagregar_clicked();
 
+    void on_AGREGAR_clicked();
 
-    void on_regresar_clicked();
+    void on_REGRESAR_clicked();
 
 private:
     Ui::planificar *ui;

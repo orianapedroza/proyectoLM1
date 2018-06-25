@@ -17,9 +17,12 @@ public:
     ~login();
 
 private slots:
-    void on_botonlogin_clicked();
 
-    void on_salir_clicked();
+   /// void on_salir_clicked();
+
+    void on_ENTRAR_clicked();
+
+    void on_commandLinkButton_clicked();
 
 private:
     Ui::login *ui;

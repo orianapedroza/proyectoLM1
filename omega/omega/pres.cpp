@@ -32,7 +32,7 @@ pres::~pres()
 void pres::on_ingresar_clicked()
 {
     this->pre.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,pre.size(),qApp->desktop()->availableGeometry()));
-    this->pre.setFixedSize(800,500);
+    ///this->pre.setFixedSize(800,500);
     this->pre.show();
     hide();
 }

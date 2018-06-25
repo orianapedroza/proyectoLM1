@@ -23,7 +23,7 @@ private slots:
 
     void on_VER_clicked();
 
-    void on_pushButton_clicked();
+    void on_SALIR_clicked();
 
 private:
     Ui::menu *ui;

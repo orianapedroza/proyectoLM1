@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <fstream>
 #include <iostream>
+#include <QMessageBox>
 
 registrar::registrar(QWidget *parent) :
     QWidget(parent),
@@ -77,7 +78,7 @@ void registrar::on_REGISTRAR_clicked()
     qDebug()<<usu;
     qDebug()<<cor;
     qDebug()<<con;
-
+    QMessageBox::information(this,"Registrar","Registro exitoso");
 
    /// this->n.show();
 }
