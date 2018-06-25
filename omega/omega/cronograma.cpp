@@ -3,6 +3,7 @@
 #include <fstream>
 #include <QDebug>
 #include <QPixmap>
+#include <QDesktopWidget>
 
 
 cronograma::cronograma(QWidget *parent) :
@@ -190,5 +191,6 @@ void cronograma::on_REGRESAR_clicked()
 
 void cronograma::on_MODIFICAR_clicked()
 {
-
+    this->p.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,p.size(),qApp->desktop()->availableGeometry()));
+    p.show();
 }

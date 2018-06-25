@@ -15,9 +15,12 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -26,7 +29,10 @@ class Ui_cronograma
 public:
     QTableWidget *tableWidget;
     QLabel *label;
+    QWidget *widget;
+    QHBoxLayout *horizontalLayout;
     QCommandLinkButton *REGRESAR;
+    QSpacerItem *horizontalSpacer;
     QCommandLinkButton *MODIFICAR;
 
     void setupUi(QDialog *cronograma)
@@ -99,9 +105,14 @@ public:
         font4.setBold(true);
         font4.setWeight(75);
         label->setFont(font4);
-        REGRESAR = new QCommandLinkButton(cronograma);
+        widget = new QWidget(cronograma);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(170, 420, 496, 50));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        REGRESAR = new QCommandLinkButton(widget);
         REGRESAR->setObjectName(QStringLiteral("REGRESAR"));
-        REGRESAR->setGeometry(QRect(80, 430, 168, 41));
         QFont font5;
         font5.setFamily(QStringLiteral("Padauk"));
         font5.setPointSize(14);
@@ -111,13 +122,22 @@ public:
         QIcon icon;
         icon.addFile(QStringLiteral(":/new/prefix1/regre.png"), QSize(), QIcon::Normal, QIcon::Off);
         REGRESAR->setIcon(icon);
-        MODIFICAR = new QCommandLinkButton(cronograma);
+
+        horizontalLayout->addWidget(REGRESAR);
+
+        horizontalSpacer = new QSpacerItem(138, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        MODIFICAR = new QCommandLinkButton(widget);
         MODIFICAR->setObjectName(QStringLiteral("MODIFICAR"));
-        MODIFICAR->setGeometry(QRect(400, 430, 168, 41));
         MODIFICAR->setFont(font5);
         QIcon icon1;
         icon1.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
         MODIFICAR->setIcon(icon1);
+
+        horizontalLayout->addWidget(MODIFICAR);
+
 
         retranslateUi(cronograma);
 

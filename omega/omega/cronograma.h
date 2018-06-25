@@ -1,8 +1,9 @@
 #ifndef CRONOGRAMA_H
 #define CRONOGRAMA_H
 
-#include <QDialog>
 
+#include <QDialog>
+#include "modi.h"
 
 namespace Ui {
 class cronograma;
@@ -25,6 +26,7 @@ private slots:
 
 private:
     Ui::cronograma *ui;
+    modi p;
 
 };
 

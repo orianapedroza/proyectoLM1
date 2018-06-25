@@ -61,13 +61,15 @@ SOURCES       = ../omega/main.cpp \
 		../omega/planificacion.cpp \
 		../omega/planificar.cpp \
 		../omega/usuario.cpp \
-		../omega/registrar.cpp qrc_icono.cpp \
+		../omega/registrar.cpp \
+		../omega/modi.cpp qrc_icono.cpp \
 		moc_pres.cpp \
 		moc_cronograma.cpp \
 		moc_login.cpp \
 		moc_menu.cpp \
 		moc_planificar.cpp \
-		moc_registrar.cpp
+		moc_registrar.cpp \
+		moc_modi.cpp
 OBJECTS       = main.o \
 		pres.o \
 		actividades.o \
@@ -82,13 +84,15 @@ OBJECTS       = main.o \
 		planificar.o \
 		usuario.o \
 		registrar.o \
+		modi.o \
 		qrc_icono.o \
 		moc_pres.o \
 		moc_cronograma.o \
 		moc_login.o \
 		moc_menu.o \
 		moc_planificar.o \
-		moc_registrar.o
+		moc_registrar.o \
+		moc_modi.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -156,7 +160,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../omega/planificacion.h \
 		../omega/planificar.h \
 		../omega/usuario.h \
-		../omega/registrar.h ../omega/main.cpp \
+		../omega/registrar.h \
+		../omega/modi.h ../omega/main.cpp \
 		../omega/pres.cpp \
 		../omega/actividades.cpp \
 		../omega/apuntes.cpp \
@@ -169,7 +174,8 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		../omega/planificacion.cpp \
 		../omega/planificar.cpp \
 		../omega/usuario.cpp \
-		../omega/registrar.cpp
+		../omega/registrar.cpp \
+		../omega/modi.cpp
 QMAKE_TARGET  = omega
 DESTDIR       = #avoid trailing-slash linebreak
 TARGET        = omega
@@ -197,7 +203,7 @@ first: all
 
 ####### Build rules
 
-$(TARGET): ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h $(OBJECTS)  
+$(TARGET): ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h ui_modi.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../omega/omega.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -338,9 +344,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents ../omega/icono.qrc $(DISTDIR)/
-	$(COPY_FILE) --parents ../omega/pres.h ../omega/actividades.h ../omega/apuntes.h ../omega/cronograma.h ../omega/fecha.h ../omega/hora.h ../omega/login.h ../omega/menu.h ../omega/planificacion.h ../omega/planificar.h ../omega/usuario.h ../omega/registrar.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../omega/main.cpp ../omega/pres.cpp ../omega/actividades.cpp ../omega/apuntes.cpp ../omega/cronograma.cpp ../omega/fecha.cpp ../omega/hora.cpp ../omega/login.cpp ../omega/materia.cpp ../omega/menu.cpp ../omega/planificacion.cpp ../omega/planificar.cpp ../omega/usuario.cpp ../omega/registrar.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../omega/pres.ui ../omega/cronograma.ui ../omega/login.ui ../omega/menu.ui ../omega/planificar.ui ../omega/registrar.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../omega/pres.h ../omega/actividades.h ../omega/apuntes.h ../omega/cronograma.h ../omega/fecha.h ../omega/hora.h ../omega/login.h ../omega/menu.h ../omega/planificacion.h ../omega/planificar.h ../omega/usuario.h ../omega/registrar.h ../omega/modi.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../omega/main.cpp ../omega/pres.cpp ../omega/actividades.cpp ../omega/apuntes.cpp ../omega/cronograma.cpp ../omega/fecha.cpp ../omega/hora.cpp ../omega/login.cpp ../omega/materia.cpp ../omega/menu.cpp ../omega/planificacion.cpp ../omega/planificar.cpp ../omega/usuario.cpp ../omega/registrar.cpp ../omega/modi.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../omega/pres.ui ../omega/cronograma.ui ../omega/login.ui ../omega/menu.ui ../omega/planificar.ui ../omega/registrar.ui ../omega/modi.ui $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -381,9 +387,9 @@ qrc_icono.cpp: ../omega/icono.qrc \
 		../omega/apu.png
 	/usr/lib/x86_64-linux-gnu/qt5/bin/rcc -name icono ../omega/icono.qrc -o qrc_icono.cpp
 
-compiler_moc_header_make_all: moc_pres.cpp moc_cronograma.cpp moc_login.cpp moc_menu.cpp moc_planificar.cpp moc_registrar.cpp
+compiler_moc_header_make_all: moc_pres.cpp moc_cronograma.cpp moc_login.cpp moc_menu.cpp moc_planificar.cpp moc_registrar.cpp moc_modi.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_pres.cpp moc_cronograma.cpp moc_login.cpp moc_menu.cpp moc_planificar.cpp moc_registrar.cpp
+	-$(DEL_FILE) moc_pres.cpp moc_cronograma.cpp moc_login.cpp moc_menu.cpp moc_planificar.cpp moc_registrar.cpp moc_modi.cpp
 moc_pres.cpp: ../omega/login.h \
 		../omega/menu.h \
 		../omega/planificar.h \
@@ -416,11 +422,14 @@ moc_registrar.cpp: ../omega/login.h \
 		../omega/registrar.h
 	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/maferg/Escritorio/omega/omega -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../omega/registrar.h -o moc_registrar.cpp
 
+moc_modi.cpp: ../omega/modi.h
+	/usr/lib/x86_64-linux-gnu/qt5/bin/moc $(DEFINES) -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++-64 -I/home/maferg/Escritorio/omega/omega -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/5 -I/usr/include/x86_64-linux-gnu/c++/5 -I/usr/include/c++/5/backward -I/usr/lib/gcc/x86_64-linux-gnu/5/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../omega/modi.h -o moc_modi.cpp
+
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h
+compiler_uic_make_all: ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h ui_modi.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h
+	-$(DEL_FILE) ui_pres.h ui_cronograma.h ui_login.h ui_menu.h ui_planificar.h ui_registrar.h ui_modi.h
 ui_pres.h: ../omega/pres.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../omega/pres.ui -o ui_pres.h
 
@@ -438,6 +447,9 @@ ui_planificar.h: ../omega/planificar.ui
 
 ui_registrar.h: ../omega/registrar.ui
 	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../omega/registrar.ui -o ui_registrar.h
+
+ui_modi.h: ../omega/modi.ui
+	/usr/lib/x86_64-linux-gnu/qt5/bin/uic ../omega/modi.ui -o ui_modi.h
 
 compiler_yacc_decl_make_all:
 compiler_yacc_decl_clean:
@@ -526,6 +538,10 @@ registrar.o: ../omega/registrar.cpp ../omega/registrar.h \
 		ui_registrar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o registrar.o ../omega/registrar.cpp
 
+modi.o: ../omega/modi.cpp ../omega/modi.h \
+		ui_modi.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o modi.o ../omega/modi.cpp
+
 qrc_icono.o: qrc_icono.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o qrc_icono.o qrc_icono.cpp
 
@@ -546,6 +562,9 @@ moc_planificar.o: moc_planificar.cpp
 
 moc_registrar.o: moc_registrar.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_registrar.o moc_registrar.cpp
+
+moc_modi.o: moc_modi.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_modi.o moc_modi.cpp
 
 ####### Install
 
