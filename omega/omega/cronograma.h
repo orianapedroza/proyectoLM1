@@ -4,6 +4,7 @@
 
 #include <QDialog>
 #include "modi.h"
+#include "eliminar.h"
 
 namespace Ui {
 class cronograma;
@@ -24,9 +25,12 @@ private slots:
 
     void on_MODIFICAR_clicked();
 
+    void on_ELIMINAR_clicked();
+    
 private:
     Ui::cronograma *ui;
     modi p;
+    eliminar j;
 
 };
 

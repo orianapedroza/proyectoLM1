@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     planificar.cpp \
     usuario.cpp \
     registrar.cpp \
-    modi.cpp
+    modi.cpp \
+    eliminar.cpp
 
 HEADERS  += pres.h \
     actividades.h \
@@ -40,7 +41,8 @@ HEADERS  += pres.h \
     planificar.h \
     usuario.h \
     registrar.h \
-    modi.h
+    modi.h \
+    eliminar.h
 
 FORMS    += pres.ui \
     cronograma.ui \
@@ -48,7 +50,8 @@ FORMS    += pres.ui \
     menu.ui \
     planificar.ui \
     registrar.ui \
-    modi.ui
+    modi.ui \
+    eliminar.ui
 
 RESOURCES += \
     icono.qrc

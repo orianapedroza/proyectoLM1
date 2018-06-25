@@ -118,7 +118,7 @@ void modi::on_AGREGAR_clicked()
 ///        salida<<h<<"#"<<a<<"#"<<t<<"#"<<lun<<"#"<<mar<<"#"<<mie<<"#"<<jue<<"#"<<vie<<"#"<<sab<<"#"<<dom<<'\n';
        /// salida<<"holaaaaaaaaaaaaaaaaaaaaaaa programacion";
         salida.close();*/
-    QString hor3 = ui->hora_3->text();
+        QString hor3 = ui->hora_3->text();
         QString min = ui->min_3->text();
         QString uni = ui->universal->currentText();
         QString Hf = hor3 +":"+ min+uni ;

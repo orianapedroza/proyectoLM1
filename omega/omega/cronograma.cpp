@@ -194,3 +194,9 @@ void cronograma::on_MODIFICAR_clicked()
     this->p.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,p.size(),qApp->desktop()->availableGeometry()));
     p.show();
 }
+
+void cronograma::on_ELIMINAR_clicked()
+{
+    this->j.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,j.size(),qApp->desktop()->availableGeometry()));
+    j.show();
+}

@@ -29,10 +29,12 @@ class Ui_cronograma
 public:
     QTableWidget *tableWidget;
     QLabel *label;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QCommandLinkButton *REGRESAR;
     QSpacerItem *horizontalSpacer;
+    QCommandLinkButton *ELIMINAR;
+    QSpacerItem *horizontalSpacer_2;
     QCommandLinkButton *MODIFICAR;
 
     void setupUi(QDialog *cronograma)
@@ -105,13 +107,13 @@ public:
         font4.setBold(true);
         font4.setWeight(75);
         label->setFont(font4);
-        widget = new QWidget(cronograma);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(170, 420, 496, 50));
-        horizontalLayout = new QHBoxLayout(widget);
+        layoutWidget = new QWidget(cronograma);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(60, 421, 696, 50));
+        horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        REGRESAR = new QCommandLinkButton(widget);
+        REGRESAR = new QCommandLinkButton(layoutWidget);
         REGRESAR->setObjectName(QStringLiteral("REGRESAR"));
         QFont font5;
         font5.setFamily(QStringLiteral("Padauk"));
@@ -125,16 +127,32 @@ public:
 
         horizontalLayout->addWidget(REGRESAR);
 
-        horizontalSpacer = new QSpacerItem(138, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(78, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer);
 
-        MODIFICAR = new QCommandLinkButton(widget);
+        ELIMINAR = new QCommandLinkButton(layoutWidget);
+        ELIMINAR->setObjectName(QStringLiteral("ELIMINAR"));
+        QFont font6;
+        font6.setFamily(QStringLiteral("Padauk"));
+        font6.setPointSize(14);
+        ELIMINAR->setFont(font6);
+        QIcon icon1;
+        icon1.addFile(QStringLiteral(":/new/prefix1/papelera.png"), QSize(), QIcon::Normal, QIcon::Off);
+        ELIMINAR->setIcon(icon1);
+
+        horizontalLayout->addWidget(ELIMINAR);
+
+        horizontalSpacer_2 = new QSpacerItem(78, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+        MODIFICAR = new QCommandLinkButton(layoutWidget);
         MODIFICAR->setObjectName(QStringLiteral("MODIFICAR"));
         MODIFICAR->setFont(font5);
-        QIcon icon1;
-        icon1.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
-        MODIFICAR->setIcon(icon1);
+        QIcon icon2;
+        icon2.addFile(QStringLiteral(":/new/prefix1/icons(1).png"), QSize(), QIcon::Normal, QIcon::Off);
+        MODIFICAR->setIcon(icon2);
 
         horizontalLayout->addWidget(MODIFICAR);
 
@@ -167,6 +185,7 @@ public:
         ___qtablewidgetitem8->setText(QApplication::translate("cronograma", "Dom", 0));
         label->setText(QApplication::translate("cronograma", "Cronograma", 0));
         REGRESAR->setText(QApplication::translate("cronograma", "Regresar", 0));
+        ELIMINAR->setText(QApplication::translate("cronograma", "Eliminar", 0));
         MODIFICAR->setText(QApplication::translate("cronograma", "Modificar", 0));
     } // retranslateUi
 

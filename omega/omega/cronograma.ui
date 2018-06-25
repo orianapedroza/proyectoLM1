@@ -177,12 +177,12 @@
     <string>Cronograma</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>170</x>
-     <y>420</y>
-     <width>496</width>
+     <x>60</x>
+     <y>421</y>
+     <width>696</width>
      <height>50</height>
     </rect>
    </property>
@@ -213,7 +213,37 @@
       </property>
       <property name="sizeHint" stdset="0">
        <size>
-        <width>138</width>
+        <width>78</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QCommandLinkButton" name="ELIMINAR">
+      <property name="font">
+       <font>
+        <family>Padauk</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Eliminar</string>
+      </property>
+      <property name="icon">
+       <iconset resource="icono.qrc">
+        <normaloff>:/new/prefix1/papelera.png</normaloff>:/new/prefix1/papelera.png</iconset>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>78</width>
         <height>20</height>
        </size>
       </property>
