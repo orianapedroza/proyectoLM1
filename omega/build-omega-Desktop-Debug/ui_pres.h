@@ -16,9 +16,9 @@
 #include <QtWidgets/QCommandLinkButton>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
-#include <QtWidgets/QPushButton>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QSpacerItem>
-#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QTextBrowser>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -26,62 +26,59 @@ QT_BEGIN_NAMESPACE
 class Ui_pres
 {
 public:
-    QVBoxLayout *verticalLayout_4;
-    QVBoxLayout *verticalLayout_3;
-    QVBoxLayout *verticalLayout_2;
-    QVBoxLayout *verticalLayout;
-    QSpacerItem *verticalSpacer;
+    QLabel *label;
+    QTextBrowser *textBrowser;
+    QWidget *widget;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
+    QSpacerItem *horizontalSpacer_3;
     QCommandLinkButton *ingresar;
-    QSpacerItem *verticalSpacer_2;
-    QHBoxLayout *horizontalLayout_2;
     QSpacerItem *horizontalSpacer_2;
     QCommandLinkButton *registrar;
-    QSpacerItem *verticalSpacer_3;
-    QHBoxLayout *horizontalLayout_3;
-    QSpacerItem *horizontalSpacer_3;
-    QPushButton *salir;
+    QSpacerItem *horizontalSpacer;
+    QCommandLinkButton *SALIR;
     QSpacerItem *horizontalSpacer_4;
-    QSpacerItem *verticalSpacer_4;
 
     void setupUi(QWidget *pres)
     {
         if (pres->objectName().isEmpty())
             pres->setObjectName(QStringLiteral("pres"));
-        pres->resize(760, 472);
-        verticalLayout_4 = new QVBoxLayout(pres);
-        verticalLayout_4->setSpacing(6);
-        verticalLayout_4->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
-        verticalLayout_3 = new QVBoxLayout();
-        verticalLayout_3->setSpacing(6);
-        verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setSpacing(6);
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
-        verticalLayout = new QVBoxLayout();
-        verticalLayout->setSpacing(6);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalSpacer = new QSpacerItem(48, 60, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setSpacing(6);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        ingresar = new QCommandLinkButton(pres);
-        ingresar->setObjectName(QStringLiteral("ingresar"));
+        pres->resize(800, 500);
+        label = new QLabel(pres);
+        label->setObjectName(QStringLiteral("label"));
+        label->setGeometry(QRect(410, 60, 381, 61));
         QFont font;
         font.setFamily(QStringLiteral("Padauk"));
-        font.setPointSize(14);
+        font.setPointSize(18);
         font.setBold(true);
         font.setWeight(75);
-        ingresar->setFont(font);
+        label->setFont(font);
+        textBrowser = new QTextBrowser(pres);
+        textBrowser->setObjectName(QStringLiteral("textBrowser"));
+        textBrowser->setGeometry(QRect(470, 140, 256, 111));
+        textBrowser->setFrameShape(QFrame::WinPanel);
+        textBrowser->setFrameShadow(QFrame::Plain);
+        textBrowser->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        textBrowser->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+        widget = new QWidget(pres);
+        widget->setObjectName(QStringLiteral("widget"));
+        widget->setGeometry(QRect(12, 313, 707, 50));
+        horizontalLayout = new QHBoxLayout(widget);
+        horizontalLayout->setSpacing(6);
+        horizontalLayout->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        ingresar = new QCommandLinkButton(widget);
+        ingresar->setObjectName(QStringLiteral("ingresar"));
+        QFont font1;
+        font1.setFamily(QStringLiteral("Padauk"));
+        font1.setPointSize(14);
+        font1.setBold(true);
+        font1.setWeight(75);
+        ingresar->setFont(font1);
         QIcon icon;
         icon.addFile(QStringLiteral(":/new/prefix1/u.png"), QSize(), QIcon::Normal, QIcon::Off);
         ingresar->setIcon(icon);
@@ -89,77 +86,41 @@ public:
 
         horizontalLayout->addWidget(ingresar);
 
-
-        verticalLayout->addLayout(horizontalLayout);
-
-        verticalSpacer_2 = new QSpacerItem(10, 15, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer_2);
-
-
-        verticalLayout_2->addLayout(verticalLayout);
-
-        horizontalLayout_2 = new QHBoxLayout();
-        horizontalLayout_2->setSpacing(6);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_2->addItem(horizontalSpacer_2);
+        horizontalLayout->addItem(horizontalSpacer_2);
 
-        registrar = new QCommandLinkButton(pres);
+        registrar = new QCommandLinkButton(widget);
         registrar->setObjectName(QStringLiteral("registrar"));
-        QFont font1;
-        font1.setFamily(QStringLiteral("Padauk Book [PYRS]"));
-        font1.setPointSize(14);
-        font1.setBold(true);
-        font1.setItalic(false);
-        font1.setWeight(75);
-        registrar->setFont(font1);
+        QFont font2;
+        font2.setFamily(QStringLiteral("Padauk Book [PYRS]"));
+        font2.setPointSize(14);
+        font2.setBold(true);
+        font2.setItalic(false);
+        font2.setWeight(75);
+        registrar->setFont(font2);
         QIcon icon1;
         icon1.addFile(QStringLiteral(":/new/prefix1/icons.ico"), QSize(), QIcon::Normal, QIcon::Off);
         registrar->setIcon(icon1);
 
-        horizontalLayout_2->addWidget(registrar);
+        horizontalLayout->addWidget(registrar);
 
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        verticalLayout_2->addLayout(horizontalLayout_2);
+        horizontalLayout->addItem(horizontalSpacer);
 
-        verticalSpacer_3 = new QSpacerItem(50, 100, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        SALIR = new QCommandLinkButton(widget);
+        SALIR->setObjectName(QStringLiteral("SALIR"));
+        QFont font3;
+        font3.setFamily(QStringLiteral("Padauk"));
+        font3.setPointSize(14);
+        SALIR->setFont(font3);
 
-        verticalLayout_2->addItem(verticalSpacer_3);
-
-
-        verticalLayout_3->addLayout(verticalLayout_2);
-
-        horizontalLayout_3 = new QHBoxLayout();
-        horizontalLayout_3->setSpacing(6);
-        horizontalLayout_3->setObjectName(QStringLiteral("horizontalLayout_3"));
-        horizontalSpacer_3 = new QSpacerItem(100, 10, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout_3->addItem(horizontalSpacer_3);
-
-        salir = new QPushButton(pres);
-        salir->setObjectName(QStringLiteral("salir"));
-        QFont font2;
-        font2.setFamily(QStringLiteral("Noto Naskh Arabic UI"));
-        font2.setPointSize(10);
-        salir->setFont(font2);
-
-        horizontalLayout_3->addWidget(salir);
+        horizontalLayout->addWidget(SALIR);
 
         horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
 
-        horizontalLayout_3->addItem(horizontalSpacer_4);
-
-
-        verticalLayout_3->addLayout(horizontalLayout_3);
-
-        verticalSpacer_4 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout_3->addItem(verticalSpacer_4);
-
-
-        verticalLayout_4->addLayout(verticalLayout_3);
+        horizontalLayout->addItem(horizontalSpacer_4);
 
 
         retranslateUi(pres);
@@ -170,9 +131,15 @@ public:
     void retranslateUi(QWidget *pres)
     {
         pres->setWindowTitle(QApplication::translate("pres", "pres", 0));
+        label->setText(QApplication::translate("pres", "LaSDAI Metodolog\303\255a de Estudio 1", 0));
+        textBrowser->setHtml(QApplication::translate("pres", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Noto Sans'; font-size:9pt; font-weight:400; font-style:normal;\" bgcolor=\"#d4e6f1\">\n"
+"<p align=\"justify\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-weight:600; color:#000000;\">Pretende ser una gu\303\255apara los estudiantes que cursan la asignatura \342\200\234Programaci\303\263n 1\342\200\235 (en cuanto a la organizacion del tiempo), la cual est\303\241 divida en tres etapas: planificaci\303\263n, asistencia a clases y pr\303\241ctica.</span></p></body></html>", 0));
         ingresar->setText(QApplication::translate("pres", "Ingresar", 0));
         registrar->setText(QApplication::translate("pres", "Registrar", 0));
-        salir->setText(QApplication::translate("pres", "Salir", 0));
+        SALIR->setText(QApplication::translate("pres", "Salir", 0));
     } // retranslateUi
 
 };

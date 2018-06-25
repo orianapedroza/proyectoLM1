@@ -65,7 +65,7 @@ public:
         QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
         tableWidget->setHorizontalHeaderItem(8, __qtablewidgetitem8);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(10, 70, 741, 291));
+        tableWidget->setGeometry(QRect(10, 80, 741, 291));
         tableWidget->setMinimumSize(QSize(611, 192));
         regresar = new QPushButton(cronograma);
         regresar->setObjectName(QStringLiteral("regresar"));

@@ -169,8 +169,8 @@
   <widget class="QLineEdit" name="hora_2">
    <property name="geometry">
     <rect>
-     <x>105</x>
-     <y>41</y>
+     <x>320</x>
+     <y>40</y>
      <width>112</width>
      <height>27</height>
     </rect>
@@ -211,6 +211,102 @@
      <height>27</height>
     </rect>
    </property>
+  </widget>
+  <widget class="QSpinBox" name="hora_3">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>40</y>
+     <width>45</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="accelerated">
+    <bool>false</bool>
+   </property>
+   <property name="suffix">
+    <string/>
+   </property>
+   <property name="prefix">
+    <string/>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>12</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="min_3">
+   <property name="geometry">
+    <rect>
+     <x>170</x>
+     <y>40</y>
+     <width>45</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>59</number>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="universal">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>40</y>
+     <width>71</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string/>
+   </property>
+   <property name="accessibleDescription">
+    <string/>
+   </property>
+   <property name="editable">
+    <bool>true</bool>
+   </property>
+   <property name="currentText">
+    <string>M</string>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <property name="maxVisibleItems">
+    <number>3</number>
+   </property>
+   <property name="maxCount">
+    <number>3</number>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtCurrent</enum>
+   </property>
+   <property name="sizeAdjustPolicy">
+    <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+   </property>
+   <item>
+    <property name="text">
+     <string>AM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>PM</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>M</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>

@@ -25,7 +25,8 @@ registrar::~registrar()
     delete ui;
 }
 
-void registrar::on_pushButton_clicked()
+
+void registrar::on_REGISTRAR_clicked()
 {
     QString nom = ui->NOMBRE->text();
     QString ape = ui->APELLIDO->text();
@@ -79,5 +80,9 @@ void registrar::on_pushButton_clicked()
 
 
    /// this->n.show();
+}
 
+void registrar::on_SALIR_clicked()
+{
+    hide();
 }

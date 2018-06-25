@@ -17,7 +17,10 @@ public:
     ~registrar();
 
 private slots:
-    void on_pushButton_clicked();
+
+    void on_REGISTRAR_clicked();
+
+    void on_SALIR_clicked();
 
 private:
     Ui::registrar *ui;

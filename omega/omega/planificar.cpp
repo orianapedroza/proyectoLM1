@@ -24,7 +24,11 @@ planificar::~planificar()
 
 void planificar::on_botonagregar_clicked()
 {
-    QString hor = ui->hora_2->text();
+    //QString hor = ui->hora_2->text();
+    QString hor3 = ui->hora_3->text();
+    QString min = ui->min_3->text();
+    QString uni = ui->universal->currentText();
+    QString Hf = hor3 +":"+ min+uni ;
     QString act = ui->actividad_2->text();
     QString tipo = ui->tipoact_2->text();
 
@@ -36,7 +40,8 @@ void planificar::on_botonagregar_clicked()
     bool sab = ui->sab->checkState();
     bool dom = ui->dom->checkState();
 
-    qDebug()<<hor;
+    qDebug()<<uni;
+    qDebug()<<Hf;
     qDebug()<<act;
     qDebug()<<lun;
 
@@ -60,7 +65,7 @@ void planificar::on_botonagregar_clicked()
 
     salida.seekg(0, salida.end);
 
-    std::string h = hor.toStdString();
+    std::string h = Hf.toStdString();
     std::string a = act.toStdString();
     std::string t = tipo.toStdString();
 

@@ -21,9 +21,9 @@ private slots:
 
     void on_ingresar_clicked();
 
-    void on_salir_clicked();
-
     void on_registrar_clicked();
+
+    void on_SALIR_clicked();
 
 private:
     Ui::pres *ui;

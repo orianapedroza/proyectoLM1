@@ -14,7 +14,7 @@ pres::pres(QWidget *parent) :
 
 
     this->setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,this->size(),qApp->desktop()->availableGeometry()));
-    this->setFixedSize(650,435);
+    this->setFixedSize(800,500);
     QPixmap bkgnd("../ini.jpg");
     bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
     QPalette palette;
@@ -32,21 +32,21 @@ pres::~pres()
 void pres::on_ingresar_clicked()
 {
     this->pre.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,pre.size(),qApp->desktop()->availableGeometry()));
-    this->pre.setFixedSize(650,435);
+    this->pre.setFixedSize(800,500);
     this->pre.show();
     hide();
 }
 
 
-void pres::on_salir_clicked()
-{
-    hide();
-}
-
 void pres::on_registrar_clicked()
 {
     this->h.setGeometry(QStyle::alignedRect(Qt::LeftToRight,Qt::AlignCenter,h.size(),qApp->desktop()->availableGeometry()));
-    this->h.setFixedSize(650,435);
+    ///this->h.setFixedSize(680,500);
     this->h.show();
+    hide();
+}
+
+void pres::on_SALIR_clicked()
+{
     hide();
 }

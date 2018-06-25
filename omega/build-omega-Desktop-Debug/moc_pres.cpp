@@ -32,12 +32,12 @@ static const qt_meta_stringdata_pres_t qt_meta_stringdata_pres = {
 QT_MOC_LITERAL(0, 0, 4), // "pres"
 QT_MOC_LITERAL(1, 5, 19), // "on_ingresar_clicked"
 QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 16), // "on_salir_clicked"
-QT_MOC_LITERAL(4, 43, 20) // "on_registrar_clicked"
+QT_MOC_LITERAL(3, 26, 20), // "on_registrar_clicked"
+QT_MOC_LITERAL(4, 47, 16) // "on_SALIR_clicked"
 
     },
-    "pres\0on_ingresar_clicked\0\0on_salir_clicked\0"
-    "on_registrar_clicked"
+    "pres\0on_ingresar_clicked\0\0"
+    "on_registrar_clicked\0on_SALIR_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -74,8 +74,8 @@ void pres::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_ingresar_clicked(); break;
-        case 1: _t->on_salir_clicked(); break;
-        case 2: _t->on_registrar_clicked(); break;
+        case 1: _t->on_registrar_clicked(); break;
+        case 2: _t->on_SALIR_clicked(); break;
         default: ;
         }
     }
